@@ -1,10 +1,7 @@
 # PIoT_Assignment3
 
-Group members:
-(1) Yuanhao Zheng -S3776401
-(2) Ziquan Wei -
-(3) Tianming Lin -S3778878
-(4) Prabhav Mohit Mehra - s3743761
+
+Prabhav Mohit Mehra - s3743761
 
 Introduction : We have built an Automatic Car share system which allows the the user to book, find and unloack and lock a car. In addition, the a customer can report some issues with the car to help the company maintain the cars. There are four types of users : customer,company,manager adn engineers and system administrator. The system administrator can do the following-:
 - View car rental history
