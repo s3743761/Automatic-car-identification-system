@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AP module &#8212; PIOT Assignment 3 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Admin module" href="Admin.html" />
+    <link rel="prev" title="scripts" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-AP">
+<span id="ap-module"></span><h1>AP module<a class="headerlink" href="#module-AP" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="AP.ap">
+<em class="property">class </em><code class="sig-prename descclassname">AP.</code><code class="sig-name descname">ap</code><a class="headerlink" href="#AP.ap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>the agent pi class, used for receiveing and communicating with MP</p>
+<dl class="py method">
+<dt id="AP.ap.check">
+<code class="sig-name descname">check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AP.ap.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if the user has logged in</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="AP.ap.menu">
+<code class="sig-name descname">menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AP.ap.menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="AP.connect">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AP.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>when successfully connecte with master pi</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AP.connect_error">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">connect_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AP.connect_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>print when connection has error</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AP.disconnect">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AP.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>when disconnect from the master pi</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="AP.my_event">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">my_event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sid</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AP.my_event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="AP.on_message">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">on_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AP.on_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="AP.on_validate_message">
+<code class="sig-prename descclassname">AP.</code><code class="sig-name descname">on_validate_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#AP.on_validate_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PIOT Assignment 3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AP module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Admin.html">Admin module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bluetooth.html">Bluetooth module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Booking.html">Booking module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Car.html">Car module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Engineer.html">Engineer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manager.html">Manager module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User.html">User module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_basic.html">test_basic module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">scripts</a></li>
+      <li>Next: <a href="Admin.html" title="next chapter">Admin module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Ziquan Wei.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/AP.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

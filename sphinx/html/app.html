@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>app module &#8212; app 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ap module" href="ap.html" />
+    <link rel="prev" title="Welcome to MP’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app">
+<span id="app-module"></span><h1>app module<a class="headerlink" href="#module-app" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="app.ack">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">ack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.ack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.authenticate">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">authenticate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em>, <em class="sig-param"><span class="n">password</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.authenticate" title="Permalink to this definition">¶</a></dt>
+<dd><p>socketio event handler
+when use username and password to login</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.book">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">book</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.book" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for handler the book button on website</p>
+<p>user could book a car during the time that user want to use</p>
+<p>if book successful</p>
+<p>:return a booking successful message and return to current page</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cancel">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a method to handler the cancel button</p>
+<p>list the booked car for the user</p>
+<p>cancle the current booked and also select that car by car_id</p>
+<p>and cancel action system delect the booked car detail on cloud database</p>
+<p>at the same time, system hanlder the google calendar API and delete the event from google calendar</p>
+<p>event select by eventID that saved before</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.cars">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">cars</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.cars" title="Permalink to this definition">¶</a></dt>
+<dd><p>define a method list all the available car on web page</p>
+<p>select all the car that avaiable</p>
+<p>return a list of available cars</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.current">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>define a function to handler the current button</p>
+<p>do the research on the database</p>
+<p>select all the booked car detail by username</p>
+<p>:return all the booked car detail append this page</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.finishBook">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">finishBook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carId</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.finishBook" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function for find list of car that user booked</p>
+<p>and after return change the car status</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.handle_finish">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">handle_finish</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.handle_finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.handle_my_custom_event">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">handle_my_custom_event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.handle_my_custom_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>handle the customer event by json</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.history">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a method handler the history</p>
+<p>select booked car detail by username</p>
+<p>list all the booked car detail to user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.img_authenticate">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">img_authenticate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">imgname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.img_authenticate" title="Permalink to this definition">¶</a></dt>
+<dd><p>socketio event handler
+when use img to login</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.insert">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">time</span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for insert the event to user google calendar</p>
+<p>after booked a car calling this method and than insert event during the user book car time</p>
+<p>:return the eventID and save into the database for late if user want to delete this event</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.login">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">login</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.login" title="Permalink to this definition">¶</a></dt>
+<dd><p>check the user typing information</p>
+<p>seacher the username and passport from User table</p>
+<p>also need verify the password</p>
+<p>if exit
+:return to the login page</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.logout">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">logout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>define a function to handler the logout button</p>
+<p>if user click logout button</p>
+<p>then user logout the system</p>
+<p>:return to the home login page</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.register">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>define a function hanlder the register html page in the MP pi
+implement the register function</p>
+<p>if user typing the correct information 
+register page pass the information to cloud database and save the information into database
+User table add a new User in the database</p>
+<p>:return a registration succesful message than return to the login html page</p>
+<p>if not 
+:return a fail registration message and return to the register page</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.search">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>implement the search function</p>
+<p>that user could search by car_id, brand, or model</p>
+<p>system select the car table</p>
+<p>:return a list of car that detail match the user type in</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.test_connect">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">test_connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.test_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>that just for return a message when connected</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.test_disconnect">
+<code class="sig-prename descclassname">app.</code><code class="sig-name descname">test_disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.test_disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>that just for return a message when disconnected</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">app</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ap.html">ap module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face.html">face module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="User.html">User module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ap.html">ap module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">app module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="face.html">face module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_to_add_data_into_database.html">use_to_add_data_into_database module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="User.html">User module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to MP’s documentation!</a></li>
+      <li>Next: <a href="ap.html" title="next chapter">ap module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Ziquan Wei.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/app.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
