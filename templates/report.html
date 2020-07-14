@@ -1,0 +1,26 @@
+{% extends 'adminBase.html' %}
+
+{% block title %}
+      Report
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p style="text-align:center;">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+{% endwith %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">Report this car</h1>
+{% if car %}
+    <form class="Car" action="#" method="POST" style="text-align:center">
+        <label class="Car">The reason to Report this car</label>
+        <input class="Car" type="text" name="issue" placeholder="Enter the issue">
+        <button type="submit"  class="Car">Report!</button>
+    </form>
+{% else %}
+    <p>Error! Unable to Report!</p>
+{% endif %}
+{% endblock %}

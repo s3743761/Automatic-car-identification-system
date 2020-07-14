@@ -1,0 +1,38 @@
+{% extends 'adminBase.html' %}
+
+{% block title %}
+      Searching Results
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p style="text-align:center;">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+{% endwith %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">Searching Results</h1>
+{% if cars %}
+  {% for car in cars  %}
+    <p style="text-align:center">Car Id: {{car.car_id}},   Brand: {{car.brand}},   Model: {{car.model}}, 
+        Location: ({{car.locationX}}, {{car.locationY}}), 
+        Availability: {%if car.available %}Yes - <a href="/book/{{car.car_id}}" style="color:springgreen">Book this car</a>
+      {% else %}Not available{% endif %},  <a href="/delete/{{car.car_id}}" style="color:red">Delete</a>,
+      <a href="/edit/{{car.car_id}}" style="color:rgb(0, 26, 255)">Edit</a>,  <a href="/report/{{car.car_id}}" style="color:rgb(162, 0, 255)">Report</a>  </p>
+  {%  endfor %}
+{% endif %}
+
+{% if users %}
+  {% for user in users  %}
+    <p style="text-align:center">Username: {{user.username}},   Firstname: {{user.firstname}},   Lastname: {{user.lastname}}, 
+        Email: {{user.email}},<a href="/deleteUser/{{user.username}}" style="color:red">Delete</a>,
+        <a href="/editUser/{{user.username}}" style="color:rgb(0, 26, 255)">Edit</a>
+       
+     </p>
+  {%  endfor %}
+{% endif %}
+
+
+{% endblock %}

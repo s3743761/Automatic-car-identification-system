@@ -1,0 +1,16 @@
+{% extends 'engineerBase.html' %}
+
+{% block map %}
+{{sndmap.js}}
+{% endblock %}
+
+{% block title %}
+      Reported Car in Map
+{% endblock %}
+
+{% block content %}
+<center>
+    <h2> All Reported Cars in the Map </h2>
+        {{sndmap.html}}
+</center>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+      All Available Cars
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p style="text-align:center;">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">All Available Cars</h1>
+{% if cars %}
+  <table style="width:100%">
+    <tr>
+      <th>Car Id</th>
+      <th>Brand</th> 
+      <th>Model</th>
+      <th>Location</th>
+      <th>Action</th> 
+    </tr>
+    {% for car in cars  %}
+      <tr>
+        <td>{{car.car_id}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.model}}</td>
+        <td>({{car.locationX}}, {{car.locationY}})</td>
+        <td><a href="/book/{{car.car_id}}" style="color:seagreen">Book</a></td>
+      </tr>
+    {%  endfor %}
+  </table>
+{% endif %}
+{% endblock %}

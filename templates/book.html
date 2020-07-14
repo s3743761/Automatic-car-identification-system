@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+      Book
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p style="text-align:center;">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+{% endwith %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">Book this car</h1>
+{% if car %}
+    <form class="Booking" action="#" method="POST" style="text-align:center">
+        <label class="Booking">The duration you want to book for this car</label>
+        <input class="Booking" type="text" name="duration" placeholder="Enter an integer (in hours)">
+        <button type="submit"  class="Booking">Book!</button>
+    </form>
+{% else %}
+    <p>Error! Unable to Book!</p>
+{% endif %}
+{% endblock %}

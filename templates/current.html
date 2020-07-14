@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}
+      Current Booking
+{% endblock %}
+
+{% block content %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">Current Bookings</h1>
+{% if currents %}
+  {% for current in currents  %}
+    <p style="text-align:center">Booking Id: {{current.booking_id}},   Car_Id: {{current.car_id}},   Duration: {{current.duration}} hours 
+    <a href="/cancel/{{current.booking_id}}" style="color:red">Cancel this booking</a></p>
+  {%  endfor %}
+{% endif %}
+{% endblock %}
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </dl>
+  <p><input type=submit value=Search>
+</form>

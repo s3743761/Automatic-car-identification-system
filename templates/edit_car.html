@@ -1,0 +1,15 @@
+<doctype html>
+    
+    <h2>Edit Car</h2>
+    
+    {% from "_formhelpers.html" import render_field %}
+    <form method=post>
+        <dl>
+            {{ render_field(form.car_id) }}
+            {{ render_field(form.brand) }}
+            {{ render_field(form.model) }}
+            {{ render_field(form.locationX) }}
+            {{ render_field(form.locationY) }}
+        </dl>
+        <p><input type=submit value=Submit>
+    </form>

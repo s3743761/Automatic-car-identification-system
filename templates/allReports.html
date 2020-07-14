@@ -1,0 +1,39 @@
+{% extends 'engineerBase.html' %}
+
+{% block title %}
+        All Reports
+{% endblock %}
+
+{% block content %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">All Reports</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p style="text-align:center;">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+{% if hists %}
+  <table style="width:100%">
+    <tr>
+      <th>Car Id</th>
+      <th>Brand</th> 
+      <th>Model</th>
+      <th>Location</th>
+      <th>Issue</th>
+      <th>Action</th> 
+    </tr>
+    {% for report in hists  %}
+    <tr>
+      <td>{{report.car_id}}</td>
+      <td>{{report.brand}}</td>
+      <td>{{report.model}}</td>
+      <td>({{report.locationX}}, {{report.locationY}})</td>
+      <td>{{report.issues}}</td>
+      <td><a href="/repair/{{report.car_id}}" style="color:seagreen">Repair</a></td>    
+    </tr>  
+    {%  endfor %}
+  </table>
+{% endif %}
+{% endblock %}

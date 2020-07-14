@@ -1,0 +1,16 @@
+{% extends 'adminBase.html' %}
+
+{% block title %}
+      Booking History
+{% endblock %}
+
+{% block content %}
+<p>Hello, {{ username }}!</p>
+<h1 style="text-align:center">Booking History</h1>
+{% if hists %}
+  {% for booking in hists  %}
+    <p style="text-align:center">Booking Id: {{booking.booking_id}},   Car_Id: {{booking.car_id}},   Duration: {{booking.duration}} hours, 
+      Status: {{booking.status}}</p>
+  {%  endfor %}
+{% endif %}
+{% endblock %}
