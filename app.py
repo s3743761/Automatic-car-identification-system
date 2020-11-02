@@ -21,72 +21,24 @@ SCOPES = "https://www.googleapis.com/auth/calendar"
 store = file.Storage("token.json")
 creds = store.get()
 if(not creds or creds.invalid):
-    flow = client.flow_from_clientsecrets("/Users/jakob/Desktop/IOT/Assignment3/PIoT_Assignment3/credentials.json", SCOPES)
+    flow = client.flow_from_clientsecrets("credentials.json", SCOPES)
     creds = tools.run_flow(flow, store)
 service = build("calendar", "v3", http=creds.authorize(Http()))
 
 #set up flask and sqlachemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:iota2hd@35.197.179.42/Car'
 db = SQLAlchemy(app)
-app.config['SECRET_KEY'] = 'secret!'
+app.config['SECRET_KEY'] = ''
 socketio = SocketIO(app)
 
 # set key as config
-app.config['GOOGLEMAPS_KEY'] = "AIzaSyC4j3ogRubmWzalYZIUmhuMUACtP_4vVG0"
+app.config['GOOGLEMAPS_KEY'] = ""
 
 # Initialize the extension
 GoogleMaps(app)
-pb = Pushbullet('o.rhD0Iy4jOrQvPtkEgd1muXHbvoLmGf19')
+pb = Pushbullet()
 
-#models 
-class User(db.Model):
-    """
-    User class for create a data type for user register and save data on cloud.
-    """
-    username = db.Column(db.String(90), primary_key=True)
-    password = db.Column(db.String(80))
-    firstname = db.Column(db.String(120))
-    lastname = db.Column(db.String(120))
-    email = db.Column( db.String(100))
-    userType = db.Column( db.String(100))
-    
-    def __repr__(self):
-        return '<User %r>' % self.username
-
-class Car(db.Model):
-    """
-    Car clsss for create a data type for car entity and save the data on cloud.
-    """
-    car_id = db.Column(db.Integer, primary_key=True)
-    brand = db.Column(db.String(100))
-    model = db.Column(db.String(100))
-    locationX = db.Column(db.Float)
-    locationY = db.Column(db.Float)
-    available = db.Column(db.Boolean, default=True)
-    issues = db.Column( db.String(400))
-
-
-    def __repr__(self):
-        return '<Car %r>' % self.car_id
-    
-class Booking(db.Model):
-    """
-    Booking class for keep a booking handler and get the google calendar event ID for the 
-    booking action. after booking save the event ID on cloud. and then could select the event ID
-    basic book ID return or delete google calendar event
-    """
-    booking_id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(90))
-    car_id = db.Column(db.Integer)
-    time = db.Column(db.DateTime, default = datetime.now)
-    duration = db.Column(db.Integer)
-    status = db.Column(db.String, default = "Processing")
-    event_id = db.Column(db.String)
-
-    def __repr__(self):
-        return '<Booking %r>' % self.booking_id
 
 #Pages
 @app.route("/", methods = ["POST", "GET"])

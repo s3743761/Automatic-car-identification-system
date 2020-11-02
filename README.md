@@ -1,14 +1,27 @@
-# PIoT_Assignment3
+# IoT Car Share System
+
+An automatic car share system which is used to book, find, unlock and lock a car. 
+There are four types of users which use this application: 
+- Customers: can register, log-in, search and book cars. A booking will automatically be added to the customer's Google Calendar.
+They can also unlock a booked-car using
+a console-based system or facial recognition AI.
+
+- System administrators: can view car rental history, users, cars, raise an issue with a car for engineers to investigate.
+
+- Company managers: can view traffic related metrics to make better business decision, such as  Daily
+active users, percentage of usage for each car per day.
+
+- Engineers: are responsible for repairing cars. Bluetooth is used to automatically unlock a car when an engineer is near it,
+and the engineer's QR code is used to store history of maintenance
+
+## Pre-requisites
+- Raspberry PI model 4
+- Python v3.6+
+- Flask (Python framework)
+- Google Calendar API access
+- GCP IoT access
 
 
-Prabhav Mohit Mehra - s3743761
-
-Introduction : We have built an Automatic Car share system which allows the the user to book, find and unloack and lock a car. In addition, the a customer can report some issues with the car to help the company maintain the cars. There are four types of users : customer,company,manager adn engineers and system administrator. The system administrator can do the following-:
-- View car rental history
-- search and view cars and user
-- add,remove and update details
-- Repoort cars with issue
--logout.
-The company manager can login to the website and capture key information by looking at visualisation dashboard. Upon logging in, a dashboard webpage will be shown. In the dashboard webpage, 3 types of visualisation graph are shown. They are able to indicate business status to help manager making business decision
-
-engineers take responsibility to repair the reported cars. They will receive a notification via email once admin reported a car that is needed to be repaired. After that, the engineer can login to the system to check out and find the car’s location.
+### Architecture
+The high level architecture diagram of the app is as follows:
+![Architecture Diagram](architecture-diagram.png)
